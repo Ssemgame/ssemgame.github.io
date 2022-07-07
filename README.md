@@ -1,2 +1,0 @@
-# ssemgame.github.io
-Web
