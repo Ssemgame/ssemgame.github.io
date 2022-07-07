@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://ssemgame.github.io/style.css">
+    <title>Ssemgame | Upload</title>
+  </head>
+  <body>
+    <a href="https://ssemgame.github.io"><img src="Domov.png" alt="Domov"></a>
+    <a href="ke-stazeni.html"><img src="Ke-stazeni.png" alt="Ke stažení"></a>
+    <a href="o-me.html"><img src="O-me.png" alt="O mě"></a>
+    <form>
+			<input type="text" id="username" placeholder="Choose Username">
+			<input type="password" id="password" placeholer="Choose Password">
+			<button type="button" onclick="getInfo()">Přihlásit se</button>
+		</form>
+
+		<script>
+      /* ======================================================================
+  Author Custom JavaScript
+====================================================================== */
+// Loop through Array of Objects
+var objPeople = [
+	{ // Object @ 0 index
+		username: "sam",
+		password: "codify"
+	},
+	{ // Object @ 1 index
+		username: "matt",
+		password: "academy"
+	},
+	{ // Object @ 2 index
+		username: "chris",
+		password: "forever"
+	}
+
+]
+
+function getInfo() {
+	var username = document.getElementById('username').value
+	var password = document.getElementById('password').value
+
+	for(var i = 0; i < objPeople.length; i++) {
+		// check is user input matches username and password of a current index of the objPeople array
+		if(username == objPeople[i].username && password == objPeople[i].password) {
+			console.log(username + " is logged in!!!")
+			// stop the function if this is found to be true
+			return
+		}
+	}
+	console.log("incorrect username or password")
+}
+    </script>
+    <style>
+      * {
+        font-family: 'Roboto', sans-serif;
+      }
+      body {
+        background-image: url(wallpaper.jpg);
+      }
+    </style>
+  </body>
+</html>
+
+
